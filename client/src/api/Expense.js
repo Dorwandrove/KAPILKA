@@ -3,7 +3,7 @@ import api from './api'
 //העמוד מבצע קריאות api 
 //לניהול האקספנסס
 
-export const addExepnse = async (payload) => {
+export const addExpense = async (payload) => {
     try {
         const { userId } = payload
         const { data } = await api.post(`/expense/add-expenses/${userId}`, payload);
