@@ -3,6 +3,7 @@ const router = require('./routes');
 const connectDB = require('./lib/connect');
 const cookieParser = require('cookie-parser'); 
 const cors = require('cors');//אפליקציה שמגדירה איזה קליינטים יכולים לקבל הודעות
+const path = require('path');
 
 const app = express();
 app.use(cookieParser());
@@ -13,7 +14,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173','https://kapilka-agvz.onrender.com'],
     credentials: true,
   })
 )

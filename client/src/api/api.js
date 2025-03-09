@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const baseURL=proccess.env.NODE_ENV==='production' ? 'kapilka-agvz.onrender.com/api' : 'http://localhost:3000/api';
+const baseURL=proccess.env.NODE_ENV==='production' ? 'kapilka-agvz.onrender.com/api' : '/api';
 //הגדרת קובץ בסיס לכל קריאות ה api
 export default axios.create({
 
