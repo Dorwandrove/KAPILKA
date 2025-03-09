@@ -190,6 +190,7 @@ export const Expenses = () => {
             />
 
             {filteredExpenses.length ? (
+                <div className='table-container'>
                 <table className='expenses-table'>
                     <thead>
                         <tr>
@@ -231,6 +232,7 @@ export const Expenses = () => {
                         ))}
                     </tbody>
                 </table>
+                </div>
             ) : (
                 <p className='not-found'>"{inputSearch}" no expenses found.</p>
             )}

@@ -9,6 +9,13 @@
   box-sizing: border-box;
 }
 
+.table-container{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
 body {
   font-family: "Anek Latin", sans-serif;
   font-weight: 500;
