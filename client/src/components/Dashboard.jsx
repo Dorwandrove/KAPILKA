@@ -71,13 +71,13 @@ export const Dashboard = () => {
         {/* כרטיס המציג את סך כל ההכנסות */}
         <div className='card income'>
           <h2>Total Income</h2>
-          {isPending.Incomes ? <p>...</p>:<p>{formatPrice.formatPrice(totalIncomes)}</p>}  {/* עיצוב הסכום בהתאם למטבע */}
+          {isPending.Incomes ? <p>...</p>:<p>{formatPrice(totalIncomes)}</p>}  {/* עיצוב הסכום בהתאם למטבע */}
         </div>
 
         {/* כרטיס המציג את סך כל ההוצאות */}
         <div className='card expense'>
           <h2>Total Expenses</h2>
-          {isPending.expenses ? <p>...</p>:<p>{formatPrice.formatPrice(totalExpenses)}</p>} {/* עיצוב הסכום בהתאם למטבע */}
+          {isPending.expenses ? <p>...</p>:<p>{formatPrice(totalExpenses)}</p>} {/* עיצוב הסכום בהתאם למטבע */}
         </div>
 
         {/* כרטיס המציג את יתרת החשבון (הכנסות - הוצאות) */}
