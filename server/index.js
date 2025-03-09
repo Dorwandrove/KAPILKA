@@ -20,6 +20,7 @@ app.use(
 )
 
 //fix deploy 4 - the resecrations
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api',router);
 
