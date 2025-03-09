@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useAuth } from './AuthProvider'
 import '../styles/Expenses.css';
-import { addExpense, deleteExpense, getExpenses, updateExpense } from '../api/expense';
+import { addExpense ,deleteExpense, getExpenses, UpdateExpense } from '../api/expense';
 import { toast } from 'react-toastify';
-import { currencySymbols } from '../constans'
+import { currencySymbols } from '../constants'
 import { Filters } from './Filters';
 
 export const Expenses = () => {
@@ -38,7 +38,6 @@ export const Expenses = () => {
                 expense.amount <= selectFilter.max
             );
         }
-
         return matchesSearch;
     });
 
@@ -73,7 +72,7 @@ export const Expenses = () => {
             console.log(expenseID)
             if (expenseID) {
                 setIsPending((prev) => ({ ...prev, update: true }));
-                const data = await updateExpense(user.id, expenseID, payload);
+                const data = await UpdateExpense(user.id, expenseID, payload);
                 toast.success(data.message);
                 setExpenses(await getExpenses(user.id));
                 resetFields();
